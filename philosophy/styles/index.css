@@ -1,0 +1,19 @@
+:root{
+    --background: #181818;
+    --accent: #101010;
+    --text: rgb(228, 253, 253);
+    --primary: #04d9ff;
+    --primary-hover:#95eaff;
+    --primary-active:#01869e;
+    font-size: .6vw;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
