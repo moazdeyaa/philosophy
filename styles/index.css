@@ -1,0 +1,113 @@
+:root{
+    /* --background: #181818;
+    --accent: #101010; */
+    --background: #edfdfd;
+    --accent: #101010;
+    --text: #111d47;
+    --primary: #04d9ff;
+    --primary-hover:#95eaff;
+    --primary-active:#01869e;
+    --gradient:linear-gradient(
+        45deg,
+        #cba8d9,
+        #f9edfe
+    );
+    --gradient2:linear-gradient(
+        45deg,
+        #e9c2f9,
+        #c2e0f9
+    );
+    font-size: .6vw;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    color: var(--text);
+    font-family: cairo, Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    text-align: right;
+}
+#background{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: none;
+}
+.bubble{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    left: 0%;
+    top: 0%;
+    background: var(--gradient2);
+    position: absolute;
+    box-shadow: 0 0 15rem 0 #d2c2f9;
+    transition: left .3s ease-in-out,top .3s ease-in-out;
+    opacity: .4;
+    transform-origin: center;
+}
+header{
+    border-bottom: 3px solid var(--text);
+    margin-bottom: 5rem;
+}
+#title{
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 700;
+}
+main{
+    padding: 0 2rem;
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+}
+.section-text{
+    width: 90rem;
+    margin-left: auto;
+}
+.section-illust{
+    height: 30rem;
+    width: fit-content;
+    margin-left: auto;
+}
+h2{
+    font-size: 3.5rem;
+}
+.highlighted{
+    font-weight: 900;
+    margin-left: .5rem;
+}
+p{
+    font-size: 2rem;
+}
+.divder{
+    height: 2px;
+    width: 80rem;
+    background-color: var(--text);
+    margin: 1rem 5rem;
+    margin-left: auto;
+}
+#test-btn{
+    width: 25rem;
+    height: 10rem;
+    font-size: 5rem;
+    border-radius: 1rem;
+    color: inherit;
+    font-family: inherit;
+    border: none;
+    background: var(--gradient2);
+    display: block;
+    margin: 0 auto;
+}
