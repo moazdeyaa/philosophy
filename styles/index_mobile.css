@@ -1,0 +1,136 @@
+@media (min-width: 1px) and (max-width: 768px) {
+    :root{
+        font-size: 1.5vw;
+    }
+    header{
+        height: 8rem;
+        padding: 0 3rem;
+    }
+    #logo{
+        padding: 1.25rem 0;
+        margin-left: 1rem;
+    }
+    #title{
+        font-size: 3.5rem;
+    }
+    main{
+        flex-direction: column;
+        padding: 2rem 3rem;
+        gap: 4rem;    
+        height: calc(100svh - 8rem);
+        justify-content: flex-start;
+    }
+    h2{
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }   
+    .yap{
+        line-height: 1.4;
+        font-size: 2.5rem;
+    }
+    #motto2{
+        margin-top: 0;
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 1.5rem;
+    }
+    #splitter-cont{
+        height: .2rem;
+        width: 100%;
+        justify-content: center;
+    }
+    #splitter{
+        width: 90%;
+        height: .2rem;
+        animation: draw-in 1s .2s ease-in-out forwards;
+    }
+    #splitter2{
+        width: 40%;
+        margin: 2rem auto;
+    }
+    #motto{
+        font-size: 3.5rem;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    .sub-motto{
+        font-size: 3.5rem;
+        width: 100%;
+        text-align: center;
+        line-height: 1.4;
+    }
+    .sub-motto::after{
+        content: " -";
+        color: var(--primary);
+        font-weight: 900;
+    }
+    #subjects-btn{
+        width: 41rem;
+        height: 9rem;
+        font-size: 4rem;
+        border-radius: 1.5rem;
+        display: block;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+    }
+    #menu{
+        --mobile: yes;
+        --height: 57rem;
+        --width: 90%;
+        --left: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        height: var(--height);
+    }
+    .menu-splitters.t,.menu-splitters.b{        
+        left: 0 !important;
+        opacity: 1 !important;
+        width: 100%;
+        height: .2rem;
+        animation: none !important;
+    }
+    .menu-splitters.r,.menu-splitters.l{        
+        top: 50%;
+    }
+    #menu-cont{
+        padding: 2rem 3rem;
+    }
+    #menu-logo{
+        height: 7rem;
+        display: none;
+        /*  */
+    }
+    .menu-header-boxes h2{
+        margin: 0;
+    }
+    #menu-close{
+        max-width: 5rem;
+        height: 5rem;
+        border-radius: 1rem;
+        font-weight: 900;
+        font-size: 2.75rem;
+    }
+    #subjects{
+        gap: 1.5rem;
+    }
+    .subject{
+        font-size: 2.25rem;
+    }
+    .subject-num{
+        font-size: 3rem;
+    }
+    @keyframes menu-open {
+    0%{
+        opacity: 1;
+        width: 90%;
+        height: .2rem;
+    }
+    100%{
+        opacity: 1;
+        width: 90%;
+        height: 57rem;
+    }
+}
+}
