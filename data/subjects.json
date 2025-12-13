@@ -4,10 +4,117 @@
         {"name":"الطموح و التخطيط"},
         {"name":"السوشيال ميديا"},
         {"name":"الحوار والاختلاف"},
-        {"name":"المبادئ و القيم"},
+        {
+            "name":"المبادئ و القيم",
+            "name2":"أنا أؤمن",
+            "projects":[
+                {
+                    "name":"اٍذاعة مدرسية",
+                    "sections":[
+                        {
+                            "type":"vid",
+                            "title":"فيديو الاٍذاعة",
+                            "link":"https://www.youtube.com/embed/31GGkJOk_xg?si=DyrDEXEyGvcnJcBn"
+                        }
+                    ]
+                }
+            ]
+        },
         {"name":"تنظيم الوقت"},
-        {"name":"المواطنة الرقمية"},
-        {"name":"ولاء و انتماء"},
+        {
+            "name":"المواطنة الرقمية",
+            "name2":"مواطن حتى على الاٍنترنت",
+            "projects":[
+                {
+                    "name":"",
+                    "sections":[
+                        {
+                            "type":"",
+                            "title":"",
+                            "link":""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"ولاء و انتماء",
+            "name2":"أنا و مصر مش مجرد بطاقة",
+            "motto":"انا مش متفرج .... انا في الصورة",
+            "quote":"حب مصر مش بيبدأ لما تكبر .. بيبدأ لما تقرر تكون أنسان يستحقها .",
+            "projects":[
+                {
+                    "name":"رحلة افتراضية عبر تاريخ مصر",
+                    "sections":[
+                    {
+                        "type":"vid",
+                        "title":"فريق العمل",
+                        "link":"https://www.youtube.com/embed/BRsCUsFTNSE?si=-Fr_isu4bt2V7_AT"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"الجزء الأول",
+                        "link":"https://www.youtube.com/embed/piPJq0_t8UQ?si=MJG5gcOtZTNUSW_Y"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"الجزء الثاني",
+                        "link":"https://www.youtube.com/embed/eNf_OXEEo30?si=9NXJtpa6dDEexy17"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"الجزء الثالث",
+                        "link":"https://www.youtube.com/embed/zsNl7sv0Cwc?si=OH45MvqXelH2yFDV"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"الجزء الرابع",
+                        "link":"https://www.youtube.com/embed/QFPWllQ8zWo?si=mvnzolzC-BmzbMiR"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"الجزء الخامس",
+                        "link":"https://www.youtube.com/embed/uhOP92zl99k?si=FwISHBvRtmazA-dJ"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"الجزء السادس",
+                        "link":"https://www.youtube.com/embed/cBOSnoZRuZY?si=teU8XIxUUKemubi8"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"نهاية الرحلة",
+                        "link":"https://www.youtube.com/embed/7GSvuAFgzqs?si=J0fVbJSc9itI9JJ2"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"التقديم",
+                        "link":"https://www.canva.com/design/DAG4H5tZg6g/Pb2TbFtKaKkbzhR9vQgeOw/view?embed"
+                    }
+                    ]
+                },
+                {
+                    "name":"قصة انتماء",
+                    "sections":[
+                    {
+                        "type":"vid",
+                        "title":"برومو",
+                        "link":"https://www.youtube.com/embed/UWDH6F5M0yo?si=em54Y0y-04Mwqul5"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"قصة انتماء",
+                        "link":"https://www.youtube.com/embed/jsyiU-XbwmM?si=JfZ1N6ZdsGqlB8qn"
+                    },
+                    {
+                        "type":"vid",
+                        "title":"مدرستي بوابة لحب وطني",
+                        "link":"https://www.youtube.com/embed/EAxnkxtVHKg?si=fD7qICvFh6JPRHwB"
+                    }
+                    ]
+                }
+            ]
+        },
         {"name":"الوعي بالقضايا العالمية"},
         {"name":"التفكير الناقد"}
     ]

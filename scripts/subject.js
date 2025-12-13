@@ -1,29 +1,57 @@
-const stagger = document.getElementsByClassName("stagger");
-const menu = document.getElementById("menu");
-const menu_cont = document.getElementById("menu-cont");
-const splitter = document.getElementById("splitter");
-const subjects_btn = document.getElementById("subjects-btn");
-const subjects = document.getElementById("subjects");
+const params = new URLSearchParams(window.location.search);
+const num = params.get("num");
+const main = document.querySelector("main");
+const projects_btn = document.querySelector("#projects-btn");
 const menu_close = document.querySelector("#menu-close");
 const menu_speed = 2;
-//fetch data
-fetch("../data/subjects.json")
+const projects = document.getElementById("projects");
+
+// const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+fetch("./data/subjects.json")
 .then(res => res.json())
 .then(data => {
-    for(let i = 0; i < data.subjects.length; i++){
-        subjects.insertAdjacentHTML("beforeend",`<button class= "subject" onclick="goToSubject(` + (i + 1) + `)"><span class="subject-num">` + (i + 1) + `</span>` + data.subjects[i].name + `</button>`);
+    document.querySelector("title").innerHTML = data.subjects[num - 1].name;
+    document.querySelector("#title").innerHTML = data.subjects[num - 1].name;
+    document.querySelector("#title2").innerHTML = num + " : " + data.subjects[num - 1].name2;
+    document.querySelector("#motto").innerHTML = data.subjects[num - 1].motto;
+    document.querySelector("#quote").innerHTML = data.subjects[num - 1].quote;
+    //i represents each project
+    //j represents each section inside one project
+    for(let i = 0; i < data.subjects[num - 1].projects.length; i++){
+        document.querySelector("#projects").insertAdjacentHTML("beforeend",`<a href="#` + (i + 1) + `" class= "project" onclick="goToProject(` + (i + 1) + `)"><span class="project-num">` + (i + 1) + `</span>` + data.subjects[num - 1].projects[i].name + `</a>`);
+        main.insertAdjacentHTML("beforeend",
+        `<section class="project-sect" id="` + (i + 1) + `">
+            <div style="position:relative;">
+                <div class="scroller"></div>
+                <h2 class="slide-in-u">` + data.subjects[num - 1].projects[i].name +`</h2>
+            </div>
+        </section>`);
+        for(let j = 0; j < data.subjects[num - 1].projects[i].sections.length; j++){
+            if(data.subjects[num - 1].projects[i].sections[j].type == "vid"){
+                document.getElementById(i+1).insertAdjacentHTML("beforeend",
+                `<div class="vid-cont">
+                    <div class="scroller"></div>
+                    <h3 class="slide-in-r">` + data.subjects[num - 1].projects[i].sections[j].title + `</h3>
+                    <iframe class="slide-in-r"  allowfullscreen src="` + data.subjects[num - 1].projects[i].sections[j].link + `" frameborder="0"></iframe>
+                </div>`);
+            }
+        }
     }
+    //scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }else{
+                // entry.target.classList.remove('visible');
+                // maybe, maybe not
+            }
+    });});
+    document.querySelectorAll('.scroller').forEach(el => observer.observe(el));
 });
-//stagger animations function
-for(let j = 0; j < stagger.length; j++){
-    let arr = stagger[j].children;
-    for(let i = 0; i < arr.length; i++){
-        arr[i].style.animationDelay = 1.6 + .3 * i + "s";
-    }
-}
 //open menu
-subjects_btn.addEventListener("click",()=>{
-    subjects_btn.style.pointerEvents = "none";
+projects_btn.addEventListener("click",()=>{
+    projects_btn.style.pointerEvents = "none";
 
     splitter.style.animation = "none";
     splitter.style.opacity = "0";
@@ -61,28 +89,29 @@ subjects_btn.addEventListener("click",()=>{
     menu_close.style.animation="slide-in-l " + (.5 / menu_speed) + "s " + (1.4 / menu_speed) + "s ease-in-out forwards";
     menu_close.style.pointerEvents = "none";
 
-    for(let i = 0; i < subjects.children.length; i++){
-        subjects.children[i].style.opacity = "0";
-        subjects.children[i].style.pointerEvents = "none";
-        resetAnim(subjects.children[i]);
-        subjects.children[i].style.animation = "slide-in-r " + (.5 / menu_speed) + "s ease-in-out forwards";
-        subjects.children[i].style.animationDelay = (1.7 / menu_speed) + (.15 * i / menu_speed) + "s";
+    for(let i = 0; i < projects.children.length; i++){
+        projects.children[i].style.opacity = "0";
+        projects.children[i].style.pointerEvents = "none";
+        resetAnim(projects.children[i]);
+        projects.children[i].style.animation = "slide-in-r " + (.5 / menu_speed) + "s ease-in-out forwards";
+        projects.children[i].style.animationDelay = (1.7 / menu_speed) + (.15 * i / menu_speed) + "s";
     }
     
     setTimeout(() => {
         menu_close.style.pointerEvents = "all"
-        for(let i = 0; i < subjects.children.length; i++){
-            subjects.children[i].style.pointerEvents = "all";
+        for(let i = 0; i < projects.children.length; i++){
+            projects.children[i].style.pointerEvents = "all";
         }
     },3050/menu_speed);
 });
+menu_close.addEventListener("click",close_menu);
 //close menu
-menu_close.addEventListener("click",()=>{
-    for(let i = subjects.children.length - 1,x = 0; i > -1; i--,x++){
-        subjects.children[i].style.opacity = "1";
-        resetAnim(subjects.children[i]);
-        subjects.children[i].style.animation = "slide-in-r " + (.5 / menu_speed) + "s ease-in-out reverse forwards";
-        subjects.children[i].style.animationDelay = (.15 * x / menu_speed) + "s";
+function close_menu(){
+    for(let i = projects.children.length - 1,x = 0; i > -1; i--,x++){
+        projects.children[i].style.opacity = "1";
+        resetAnim(projects.children[i]);
+        projects.children[i].style.animation = "slide-in-r " + (.5 / menu_speed) + "s ease-in-out reverse forwards";
+        projects.children[i].style.animationDelay = (.15 * x / menu_speed) + "s";
     }
 
     menu_close.style.opacity = "1";
@@ -130,15 +159,22 @@ menu_close.addEventListener("click",()=>{
         menu.style.opacity = "0";
         resetAnim(menu);
         splitter.style.opacity = "1";
-        subjects_btn.style.pointerEvents = "all";
+        projects_btn.style.pointerEvents = "all";
     },3800/menu_speed);
-});
-//clicking on a subject
-function goToSubject(sbj){
-    window.location.href = "./subject.html?num=" + sbj;
 }
 //resets animations to apply them again
 function resetAnim(element){
     element.style.animation = "none";
     element.offsetHeight;
 }
+function goToProject(proj){
+    const sections = document.getElementsByClassName("project-sect");
+    for(let i = 0; i < sections.length; i++){
+        sections[i].style.display = "none";
+    }
+    document.getElementById(proj).style.display = "flex";
+    close_menu();
+}
+document.querySelector("#header-cont").addEventListener("click",()=>{
+    window.location.href = "../index.html"
+});
