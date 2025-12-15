@@ -62,7 +62,7 @@ fetch("./data/subjects.json")
     questions.insertAdjacentHTML("beforeend",
         `<div style="position:relative;">
             <div class="scroller"></div>
-            <input type="submit" name="submit" value="أنهاء الأختبار" class="slide-in-r">
+            <input type="submit" id="submit" name="submit" value="أنهاء الأختبار" class="slide-in-r">
         </div>`)
     //scroll animations
     const observer = new IntersectionObserver((entries) => {
@@ -80,12 +80,14 @@ document.querySelector("#header-cont").addEventListener("click",()=>{
 });
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
+    document.querySelector("#submit").style.pointerEvents = "none";
+    document.querySelector("#submit").value = "تم الأرسال";
     let data = new FormData(form);
     console.log(Object.fromEntries(data.entries()));
     fetch(url, {
         method: "POST",
         body: data
-    }).then(() => window.location.href = "./subject.html?num=" + num)
+    }).then(() => window.location.href = "./index.html")
     .catch(err => console.error(err));
 });
 back.addEventListener("click",()=>{
