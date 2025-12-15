@@ -85,7 +85,7 @@ form.addEventListener("submit",(e)=>{
     fetch(url, {
         method: "POST",
         body: data
-    }).then(() => console.log("sent"))
+    }).then(() => window.location.href = "./subject.html?num=" + num)
     .catch(err => console.error(err));
 });
 back.addEventListener("click",()=>{
