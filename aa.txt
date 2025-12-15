@@ -1,0 +1,18 @@
+function doPost(e) {
+  const sheet = SpreadsheetApp
+    .getActiveSpreadsheet()
+    .getActiveSheet();
+
+  // FIXED headers
+  const headers = ["q0_text", "q1_text", "q2_text", "q3_text", "q4_choose","q4_text","q5_choose","q6_text","q7_text","q8_choose","q9_text","q10_text"];
+
+  // Map values in header order
+  const data = e.parameter;
+  const row = headers.map(h => data[h] ?? "");
+
+  sheet.appendRow(row);
+
+  return ContentService
+    .createTextOutput("OK")
+    .setMimeType(ContentService.MimeType.TEXT);
+}

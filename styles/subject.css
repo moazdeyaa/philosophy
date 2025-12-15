@@ -8,16 +8,6 @@
     --primary: #a38fff;
     --primary-hover:#bdb2ff;
     --primary-active:#7869be;
-    --gradient:linear-gradient(
-        45deg,
-        #cba8d9,
-        #f9edfe
-    );
-    --gradient2:linear-gradient(
-        45deg,
-        #e9c2f9,
-        #c2e0f9
-    );
     font-size: .6vw;
     scroll-behavior: smooth;
     scroll-padding: calc(var(--header) + 2rem) 0 0 0;
@@ -137,18 +127,35 @@ main{
     border-radius: 1rem;
     font-weight: 900;
     margin-top: auto;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
     transition: background-color .07s linear;
     color: var(--gray);
     opacity: 0;
     animation: slide-in-r .5s .8s ease-in-out forwards;
     text-align: center;
 }
-#projects-btn:hover,#menu-close:hover,.project:hover{
+#projects-btn:hover,#menu-close:hover,.project:hover,#test-btn:hover{
     background-color: var(--primary-hover);
 }
-#projects-btn:active,#menu-close:active,.project:active{
+#projects-btn:active,#menu-close:active,.project:active,#test-btn:active{
     background-color: var(--primary-active);
+}
+#test-btn{
+    width: 30rem;
+    height: 7rem;
+    padding: 0 2rem;
+    background-color: var(--primary);
+    font-size: 3rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 900;
+    margin-bottom: 10rem;
+    transition: background-color .07s linear;
+    color: var(--gray);
+    opacity: 0;
+    animation: slide-in-r .5s .8s ease-in-out forwards;
+    text-align: center;
 }
 #page-logo{
     height: 80%;
@@ -326,27 +333,23 @@ h3{
 }
 .vid-cont{
     width: calc(56rem * 1.75);
+    height: fit-content;
     display: flex;
     flex-direction: column;
     position: relative;
-    /* background-color: var(--gray); */
+    margin-bottom: 25rem;
 }
 iframe{
     height: calc(31.5rem * 1.75);
     width: 100%;
-    border: .2rem solid var(--white);
-    /* box-shadow: 0 0 5rem .5rem #fbffff3a; */
-    margin-bottom: 25rem;
+    border-radius: 2rem;
+    /* border: .2rem solid var(--white); */
 }
 .scroller{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    /* width: 5rem;
-    height: 5rem;
-    background-color: red;
-    z-index: 100; */
 }
 
 .slide-in-r,.slide-in-u,.slide-in-d,.slide-in-l{

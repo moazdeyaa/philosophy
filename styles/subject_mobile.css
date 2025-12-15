@@ -23,13 +23,16 @@ header{
 #title2{
     margin-top: 0;
 }
-#projects-btn{
+#projects-btn,#test-btn{
     margin:auto;
     margin-bottom: 0;
     animation: slide-in-u .5s .8s ease-in-out forwards;
     font-size: 4rem;
     width: 35rem;
     height: 8rem;
+}
+#test-btn{
+    margin-top: 2.5rem;
 }
 #page-logo{
     width: 100%;
@@ -44,7 +47,8 @@ h2{
     font-size: 3.5rem;
 }
 .yap{
-    font-size: 3rem;
+    font-size: 2.9rem;
+    line-height: 1.4;
 }
 .vid-cont{
     width: calc(56rem * 1);

@@ -7,6 +7,8 @@
         {
             "name":"المبادئ و القيم",
             "name2":"أنا أؤمن",
+            "motto":"وراء كل تغيير .. فكرة آمن بها أحدهم",
+            "quote":"قانون حياتك هو كلمة منك, تختارها باٍيمانك",
             "projects":[
                 {
                     "name":"اٍذاعة مدرسية",
@@ -24,16 +26,65 @@
         {
             "name":"المواطنة الرقمية",
             "name2":"مواطن حتى على الاٍنترنت",
+            "motto":"زي ما في البطاقة رقم قومي ... في بصمة رقمية. اللي يحترم نفسه .... بيحترم اثره الرقمي. مواطن حقيقي ..... حتي ورا الشاشة .",
+            "quote":"ان الضمير لا يغيب",
+            "test":"https://script.google.com/macros/s/AKfycbzauJlBBbc-D2QoaYkI8rcJWWA-2cYgj7ciSY6RUIJklstCpqBe4dHuIog_Gd_VG5qY/exec",
             "projects":[
                 {
-                    "name":"",
+                    "name":"الفلسفة الرقمية",
                     "sections":[
                         {
-                            "type":"",
-                            "title":"",
-                            "link":""
+                            "type":"vid",
+                            "title":"التقديم",
+                            "link":"https://www.canva.com/design/DAG7ASsEx_A/Ua9-3RFgTAlSK6Qnm2M8jg/view?embed"
                         }
                     ]
+                }
+            ],
+            "questions":[
+                {
+                    "question":"ما هو أسمك؟",
+                    "type": "text"
+                },
+                {
+                    "question":"هل شايف ان الاٍنترنت له قوانين في العالم الحقيقي؟",
+                    "type": "choose"
+                },
+                {
+                    "question":"ايه رأيك في كلمة كل مسؤول عن كل ضغطة؟",
+                    "type": "text"
+                },
+                {
+                    "question":"ايه حقك كمواطن رقمي؟ و ايه واجباتك؟",
+                    "type": "text"
+                },
+                {
+                    "question":"هل تنشر معلومات عن حد بدون اذنه؟",
+                    "type": "choose"
+                },
+                {
+                    "question":"لو حد سرق فكرتك او محتواك .... تتصرف ازاي؟",
+                    "type": "text"
+                },
+                {
+                    "question":"هل يمكن ان يكون عندك سجل أخلاقي رقمي؟",
+                    "type": "choose"
+                },
+                {
+                    "question":"هل بتشارك في أي قضية عامة أونلاين؟",
+                    "type": "choose"
+                },
+                {
+                    "question":"ايه رأيك في قوانين الجرائم الالكترونية؟ محتاجة وعي ولا مبالغ فيها؟",
+                    "type": "choose"
+                },
+                {
+                    "question":"ما رأيك في مقولة \"شارك لكن لا تجرح\" ؟",
+                    "type": "text"
+                },
+                {
+                    "question":"في عالم افتراضي لا يراك فيه أحد .... من تكون؟ علماً بأن (الضمير لا يغيب)",
+                    "type": "text"
                 }
             ]
         },
@@ -42,6 +93,7 @@
             "name2":"أنا و مصر مش مجرد بطاقة",
             "motto":"انا مش متفرج .... انا في الصورة",
             "quote":"حب مصر مش بيبدأ لما تكبر .. بيبدأ لما تقرر تكون أنسان يستحقها .",
+            "test":"https://script.google.com/macros/s/AKfycbybE-xwyIakMb3pD3boadJmkvZrxAYADGNe-V1qXsR54mGCBvWXCqyF8eQVkng7pTzTOg/exec",
             "projects":[
                 {
                     "name":"رحلة افتراضية عبر تاريخ مصر",
@@ -112,6 +164,52 @@
                         "link":"https://www.youtube.com/embed/EAxnkxtVHKg?si=fD7qICvFh6JPRHwB"
                     }
                     ]
+                }
+            ],
+            "questions":[
+                {
+                    "question":"ما هو أسمك؟",
+                    "type": "text"
+                },
+                {
+                    "question":"ايه أكتر مشكلة بتواجه الشباب في مصر؟ و ازاي تتحل؟",
+                    "type": "text"
+                },
+                {
+                    "question":"ايه اللي بتحبه في بلدك و مش هتلاقيه في مكان تاني؟",
+                    "type": "text"
+                },
+                {
+                    "question":"لو بقيت مؤول ليوم واحد ... ايه اول حاجة هتغييرها؟",
+                    "type": "text"
+                },
+                {
+                    "question":"هل شايف ان مصر بتتقدم؟ و ليه؟",
+                    "type": "hybrid"
+                },
+                {
+                    "question":"هل بتحس بالفخر لما بتشوف انجاز مصري؟",
+                    "type": "choose"
+                },
+                {
+                    "question":"لو اتعرضت صوره سلبية عن بلدك قدام الناس هتقولهم ايه؟",
+                    "type": "text"
+                },
+                {
+                    "question":"بتحب تعيش جوا مصر؟ ولا تبني مستقبلك هنا؟",
+                    "type": "text"
+                },
+                {
+                    "question":"هل بتحس ان لك دور في مستقبل بلدك؟",
+                    "type": "choose"
+                },
+                {
+                    "question":"لما حد يسألك انت مين؟ تحب تقول ايه عن نفسك من غير ما تخرج اسم بلدك من جملتك؟",
+                    "type": "text"
+                },
+                {
+                    "question":"لما يجيلك وقتك و تقدر تدي .... هتكون جاهز؟ ولا هتتكسف من نفسك؟",
+                    "type": "text"
                 }
             ]
         },

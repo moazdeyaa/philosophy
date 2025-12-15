@@ -1,0 +1,307 @@
+:root{
+    --white: #fbffff;
+    --black: #101010;
+    --gray: #262828;
+    --primary: #a38fff;
+    --primary-hover:#bdb2ff;
+    --primary-active:#7869be;
+    font-size: .6vw;
+    scroll-behavior: smooth;
+    scroll-padding: calc(var(--header) + 2rem) 0 0 0;
+    --header: 10rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--black);
+    color: var(--white);
+    font-family: cairo;
+    width: 100vw;
+    height: 100svh;
+    text-align: right;
+    direction: rtl;
+    overflow-x: hidden;
+    padding-top: var(--header);
+}
+header{
+    color: var(--white);
+    height: var(--header);
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    padding: 0 4rem;
+    background-color: var(--black);
+    z-index: 5;
+}
+header::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: .2rem;
+    opacity: 0;
+    background-color: var(--white);
+    animation: draw-in 1s .2s ease-in-out forwards;
+    box-shadow: 0 0 1rem .1rem var(--white);
+}
+#header-cont{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    animation: slide-in-d .5s ease-in-out forwards;
+    animation-delay: .8s;
+    opacity: 0;
+    user-select: none;
+}
+header .logo-1{
+    fill: var(--primary);
+}
+header .logo-2{
+    fill: var(--white);
+}
+#logo{
+    height: 100%;
+    width: fit-content;
+    padding: 1.25rem 0;
+    margin-left: 1.5rem;
+}
+#title{
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+#back{
+    width: 30rem;
+    height: 7rem;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    font-family: inherit;
+    font-weight: 900;
+    color: var(--gray);
+    font-size: 3rem;
+    border: none;
+    display: block;
+    transition: background-color .07s linear;
+    opacity: 0;
+    animation: slide-in-d .5s .8s ease-in-out forwards;
+}
+#back:hover,input[type = "submit"]:hover{
+    background-color: var(--primary-hover);
+}
+#back:active,input[type = "submit"]:active{
+    background-color: var(--primary-active);
+}
+#questions{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 10rem 0;
+    align-items: center;
+}
+.question{
+    position: relative;
+}
+.question-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    width: 100rem;
+    border-radius: 1rem;
+    padding: 5rem;
+}
+.question-num{
+    font-size: 4.5rem;
+    color: var(--primary);
+    line-height: 1;
+}
+.question-num::after{
+    content: ": ";
+}
+label{
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.4;
+}
+input{
+    height: 7rem;
+    background-color: var(--black);
+    border: .2rem solid var(--white);
+    border: none;
+    font-size: 2.5rem;
+    font-family: inherit;
+    color: var(--white);
+    padding: 0 3rem;
+    border-radius: 1rem;
+}
+input:focus{
+    outline: none;
+    border: .2rem solid var(--primary);
+}
+.choose-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.choice{
+    display: flex;
+    align-items: center;
+}
+.choice label{
+    margin: 0;
+    font-size: 3rem;
+}
+.radio-box{
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    margin-left: 1rem;
+}
+input[type="radio"]{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+input[type="radio"]:checked +.radio{
+    background-color: var(--primary);
+}
+.radio{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: var(--black);
+    pointer-events: none;
+}
+input[type="submit"]{
+    background-color: var(--primary);
+    color: var(--gray);
+    font-weight: 900;
+    width: 30rem;
+    transition: background-color .07s linear;
+}
+.dividor{
+    margin-top: 1rem;
+}
+
+.scroller{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.slide-in-r,.slide-in-u,.slide-in-d,.slide-in-l{
+    opacity: 0;
+}
+.scroller.visible ~ h3::before,.scroller.visible ~ h2::before{
+    animation: draw-in .5s .3s ease-in-out forwards;
+}
+.scroller.visible ~ .slide-in-r{
+    animation: slide-in-r .7s .2s ease-in-out forwards;
+}
+.scroller.visible ~ .slide-in-d{
+    animation: slide-in-d .7s .2s ease-in-out forwards;
+}
+.scroller.visible ~ .slide-in-u{
+    animation: slide-in-u .7s .2s ease-in-out forwards;
+}
+.scroller.visible ~ .slide-in-l{
+    animation: slide-in-l .7s .2s ease-in-out forwards;
+}
+@keyframes slide-in-r {
+    0%{
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-l {
+    0%{
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-d {
+    0%{
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-dr {
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+}
+@keyframes slide-in-u {
+    0%{
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes draw-in {
+    0%{
+        width: 0;
+        opacity: 1;
+        left: 50%;
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+@keyframes draw-in-h {
+    0%{
+        height: 0;
+        opacity: 1;
+        top: 50%;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
+@keyframes menu-open {
+    0%{
+        opacity: 1;
+        width: .2rem;
+        left: 0;
+        height: 70%;
+    }
+    50%{
+        opacity: 1;
+        width: 80rem;
+        left: -40rem;
+        height: 70%;
+    }
+    100%{
+        opacity: 1;
+        width: 80rem;
+        left: -40rem;
+        height: 50%;
+    }
+}

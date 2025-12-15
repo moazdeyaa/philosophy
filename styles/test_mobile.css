@@ -1,0 +1,50 @@
+@media (min-width: 1px) and (max-width: 425px) {
+:root{
+    font-size: 1.5vw;
+    --header: 8rem;
+}
+header{
+    height: var(--header);
+    padding: 0 3rem;
+}
+#logo{
+    padding: 1.25rem 0;
+    margin-left: 1rem;
+}
+#title{
+    font-size: 3.5rem;
+}
+#questions{
+    padding: 5rem 0;
+}
+.question-wrapper{
+    width: 50rem;
+    border-radius: 1.5rem;
+    padding: 3em;
+}
+.question-num{
+    font-size: 3.5rem;
+}
+label{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+input{
+    height: 7rem;
+    font-size: 2rem;
+    padding: 0 2rem;
+}
+.choice label{
+    font-size: 2.5rem;
+}
+input[type="submit"]{
+    width: 35rem;
+    height: 8rem;
+    font-size: 4rem;
+}
+#back{
+    width: 40rem;
+    height: 8rem;
+    font-size: 4rem;
+}
+}

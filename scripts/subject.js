@@ -6,7 +6,9 @@ const menu_close = document.querySelector("#menu-close");
 const menu_speed = 2;
 const projects = document.getElementById("projects");
 
-// const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+if(num == null){
+    window.location.href = "./index.html";
+}
 fetch("./data/subjects.json")
 .then(res => res.json())
 .then(data => {
@@ -42,9 +44,6 @@ fetch("./data/subjects.json")
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-            }else{
-                // entry.target.classList.remove('visible');
-                // maybe, maybe not
             }
     });});
     document.querySelectorAll('.scroller').forEach(el => observer.observe(el));
@@ -176,5 +175,8 @@ function goToProject(proj){
     close_menu();
 }
 document.querySelector("#header-cont").addEventListener("click",()=>{
-    window.location.href = "../index.html"
+    window.location.href = "./index.html"
+});
+document.querySelector("#test-btn").addEventListener("click",()=>{
+    window.location.href = "./test.html?num=" + num;
 });

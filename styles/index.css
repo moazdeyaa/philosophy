@@ -8,16 +8,6 @@
     --primary: #a38fff;
     --primary-hover:#bdb2ff;
     --primary-active:#7869be;
-    --gradient:linear-gradient(
-        45deg,
-        #cba8d9,
-        #f9edfe
-    );
-    --gradient2:linear-gradient(
-        45deg,
-        #e9c2f9,
-        #c2e0f9
-    );
     font-size: .6vw;
 }
 *{
@@ -307,7 +297,6 @@ h2::after{
 @keyframes slide-in-r {
     0%{
         transform: translateX(10%);
-        filter: blur(2px);
         opacity: 0;
     }
     100%{
@@ -318,7 +307,6 @@ h2::after{
 @keyframes slide-in-l {
     0%{
         transform: translateX(-30%);
-        filter: blur(2px);
         opacity: 0;
     }
     100%{
@@ -329,24 +317,20 @@ h2::after{
 @keyframes slide-in-d {
     0%{
         transform: translateY(-20%);
-        filter: blur(2px);
         opacity: 0;
     }
     100%{
         transform: translateY(0px);
-        filter: blur(0);
         opacity: 1;
     }
 }
 @keyframes slide-in-dr {
     0%{
         transform: translateY(0px);
-        filter: blur(0);
         opacity: 1;
     }
     100%{
         transform: translateY(-20%);
-        filter: blur(2px);
         opacity: 0;
     }
 }
