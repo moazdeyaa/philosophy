@@ -61,12 +61,6 @@ header::after{
     opacity: 0;
     user-select: none;
 }
-header .logo-1{
-    fill: var(--primary);
-}
-header .logo-2{
-    fill: var(--white);
-}
 #logo{
     height: 100%;
     width: fit-content;
@@ -96,12 +90,16 @@ main{
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: space-around;
+}
+#bla{
+    display: flex;
+    flex-direction: column;
 }
 #title2{
     animation: slide-in-r .5s .8s ease-in-out forwards;
     opacity: 0;
     margin-bottom: 1rem;
-    margin-top: 15rem;
 }
 #title2::before{
     animation: draw-in .5s .9s ease-in-out forwards;
@@ -116,6 +114,11 @@ main{
     content: '"';
     color: var(--primary);
 }
+#buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 #projects-btn{
     width: 30rem;
     height: 7rem;
@@ -126,8 +129,6 @@ main{
     border: none;
     border-radius: 1rem;
     font-weight: 900;
-    margin-top: auto;
-    margin-bottom: 2rem;
     transition: background-color .07s linear;
     color: var(--gray);
     opacity: 0;
@@ -150,7 +151,6 @@ main{
     border: none;
     border-radius: 1rem;
     font-weight: 900;
-    margin-bottom: 10rem;
     transition: background-color .07s linear;
     color: var(--gray);
     opacity: 0;
@@ -171,7 +171,7 @@ main{
     position: relative;
 }
 #splitter{
-    height: 70%;
+    height: 60rem;
     width: .2rem;
     background-color: var(--primary);
     border-radius: .1rem;
@@ -190,7 +190,7 @@ main{
     left: 0;
     transform: translate(0,-50%);
     width: .2rem;
-    height: 70%;
+    height: 60rem;
     background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
     display: flex;
@@ -269,7 +269,8 @@ main{
 #projects{
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: flex-start;
+    padding: 3rem 0;
     gap: 1.5rem;
     height: 100%;
 }
@@ -343,7 +344,6 @@ iframe{
     height: calc(31.5rem * 1.75);
     width: 100%;
     border-radius: 2rem;
-    /* border: .2rem solid var(--white); */
 }
 .scroller{
     position: absolute;
@@ -447,18 +447,18 @@ iframe{
         opacity: 1;
         width: .2rem;
         left: 0;
-        height: 70%;
+        height: 60rem;
     }
     50%{
         opacity: 1;
         width: 80rem;
         left: -40rem;
-        height: 70%;
+        height: 60rem;
     }
     100%{
         opacity: 1;
         width: 80rem;
         left: -40rem;
-        height: 50%;
+        height: var(--height);
     }
 }

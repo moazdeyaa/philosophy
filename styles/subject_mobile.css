@@ -20,19 +20,20 @@ header{
     gap: 4rem;
     padding: 5rem 0;
 }
+#page-info{
+    justify-content: space-between;
+}
 #title2{
     margin-top: 0;
 }
+#buttons{
+    align-items: center;
+}
 #projects-btn,#test-btn{
-    margin:auto;
-    margin-bottom: 0;
     animation: slide-in-u .5s .8s ease-in-out forwards;
     font-size: 4rem;
     width: 35rem;
     height: 8rem;
-}
-#test-btn{
-    margin-top: 2.5rem;
 }
 #page-logo{
     width: 100%;
@@ -55,13 +56,11 @@ h2{
     display: flex;
     flex-direction: column;
     position: relative;
-    /* background-color: var(--gray); */
 }
 iframe{
     height: calc(31.5rem * 1);
     width: 100%;
     border: .2rem solid var(--white);
-    /* box-shadow: 0 0 5rem .5rem #fbffff3a; */
     margin-bottom: 25rem;
 }
 
