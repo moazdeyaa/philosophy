@@ -12,6 +12,9 @@ if(num == null){
 fetch("./data/subjects.json")
 .then(res => res.json())
 .then(data => {
+    if(!data.subjects[num - 1].name2){
+        window.location.href = "./index.html"
+    }
     document.querySelector("title").innerHTML = data.subjects[num - 1].name;
     document.querySelector("#title").innerHTML = data.subjects[num - 1].name;
     document.querySelector("#title2").innerHTML = num + " : " + data.subjects[num - 1].name2;
@@ -25,17 +28,32 @@ fetch("./data/subjects.json")
         `<section class="project-sect" id="` + (i + 1) + `">
             <div style="position:relative;">
                 <div class="scroller"></div>
-                <h2 class="slide-in-u">` + data.subjects[num - 1].projects[i].name +`</h2>
+                <h2 class="slide-in-r">` + data.subjects[num - 1].projects[i].name +`</h2>
+            </div>
+            <div class="projects">
             </div>
         </section>`);
         for(let j = 0; j < data.subjects[num - 1].projects[i].sections.length; j++){
-            if(data.subjects[num - 1].projects[i].sections[j].type == "vid"){
-                document.getElementById(i+1).insertAdjacentHTML("beforeend",
-                `<div class="vid-cont">
-                    <div class="scroller"></div>
-                    <h3 class="slide-in-r">` + data.subjects[num - 1].projects[i].sections[j].title + `</h3>
-                    <iframe class="slide-in-r"  allowfullscreen src="` + data.subjects[num - 1].projects[i].sections[j].link + `" frameborder="0"></iframe>
-                </div>`);
+            //check type of media being inserted
+            switch(data.subjects[num - 1].projects[i].sections[j].type){
+                //iframe
+                case "iframe":
+                    document.getElementById(i+1).querySelector(".projects").insertAdjacentHTML("beforeend",
+                    `<div class="vid-cont">
+                        <div class="scroller"></div>
+                        <h3 class="slide-in-r">` + data.subjects[num - 1].projects[i].sections[j].title + `</h3>
+                        <iframe class="slide-in-r"  allowfullscreen src="` + data.subjects[num - 1].projects[i].sections[j].link + `" frameborder="0"></iframe>
+                    </div>`);
+                break;
+                //video from source
+                case "vid_src":
+                    document.getElementById(i+1).querySelector(".projects").insertAdjacentHTML("beforeend",
+                    `<div class="vid-cont">
+                        <div class="scroller"></div>
+                        <h3 class="slide-in-r">` + data.subjects[num - 1].projects[i].sections[j].title + `</h3>
+                        <video class="slide-in-r" src="` + data.subjects[num - 1].projects[i].sections[j].link + `" controls></video>
+                    </div>`);
+                break;
             }
         }
     }
@@ -170,6 +188,9 @@ function goToProject(proj){
     const sections = document.getElementsByClassName("project-sect");
     for(let i = 0; i < sections.length; i++){
         sections[i].style.display = "none";
+        for(let j = 0; j < sections[i].querySelectorAll(".scroller").length; j++){
+            sections[i].querySelectorAll(".scroller")[j].classList.remove("visible");
+        }
     }
     document.getElementById(proj).style.display = "flex";
     close_menu();
@@ -179,4 +200,11 @@ document.querySelector("#header-cont").addEventListener("click",()=>{
 });
 document.querySelector("#test-btn").addEventListener("click",()=>{
     window.location.href = "./test.html?num=" + num;
+});
+window.addEventListener('load', () => {
+    let arrr = Array.from(document.querySelector("#bla").children).concat(Array.from(document.querySelector("#buttons").children));
+    for(let i = 0; i < arrr.length; i++){
+        arrr[i].style.animation = "slide-in-r .5s ease-in-out forwards";
+        arrr[i].style.animationDelay = .8 + .1 * i + "s";
+    }
 });

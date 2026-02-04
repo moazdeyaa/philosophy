@@ -97,17 +97,15 @@ main{
     flex-direction: column;
 }
 #title2{
-    animation: slide-in-r .5s .8s ease-in-out forwards;
     opacity: 0;
     margin-bottom: 1rem;
 }
 #title2::before{
-    animation: draw-in .5s .9s ease-in-out forwards;
+    animation: draw-in .5s 1.3s ease-in-out forwards;
 }
 .yap{
     max-width: 80rem;
     font-size: 3rem;
-    animation: slide-in-r .5s .8s ease-in-out forwards;
     opacity: 0;
 }
 .yap::before, .yap::after{
@@ -132,7 +130,6 @@ main{
     transition: background-color .07s linear;
     color: var(--gray);
     opacity: 0;
-    animation: slide-in-r .5s .8s ease-in-out forwards;
     text-align: center;
 }
 #projects-btn:hover,#menu-close:hover,.project:hover,#test-btn:hover{
@@ -154,7 +151,6 @@ main{
     transition: background-color .07s linear;
     color: var(--gray);
     opacity: 0;
-    animation: slide-in-r .5s .8s ease-in-out forwards;
     text-align: center;
 }
 #page-logo{
@@ -307,11 +303,20 @@ section{
     flex-direction: column;
     display: none;
 }
+.project-sect{
+    min-height: calc(100svh - var(--header));
+    justify-content: center;
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+    padding-bottom: 7rem;
+}
 h2{
     font-size: 4rem;
     position: relative;
     width: fit-content;
-    margin-bottom: 00rem;
 }
 h2::before,h3::before{
     content: "";
@@ -338,7 +343,6 @@ h3{
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 25rem;
 }
 iframe{
     height: calc(31.5rem * 1.75);

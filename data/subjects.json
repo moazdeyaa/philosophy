@@ -14,7 +14,7 @@
                     "name":"اٍذاعة مدرسية",
                     "sections":[
                         {
-                            "type":"vid",
+                            "type":"iframe",
                             "title":"فيديو الاٍذاعة",
                             "link":"https://www.youtube.com/embed/31GGkJOk_xg?si=DyrDEXEyGvcnJcBn"
                         }
@@ -31,22 +31,57 @@
             "test":"https://script.google.com/macros/s/AKfycbzauJlBBbc-D2QoaYkI8rcJWWA-2cYgj7ciSY6RUIJklstCpqBe4dHuIog_Gd_VG5qY/exec",
             "projects":[
                 {
-                    "name":"الفلسفة الرقمية",
+                    "name":"رحلة المغامر الرقمي",
                     "sections":[
                         {
-                            "type":"vid",
+                            "type":"iframe",
                             "title":"التقديم",
                             "link":"https://www.canva.com/design/DAG7ASsEx_A/Ua9-3RFgTAlSK6Qnm2M8jg/view?embed"
                         }
                     ]
                 },
                 {
-                    "name":"البصمة الرقمية",
+                    "name":"مؤثر رقمي مسؤول",
                     "sections":[
                         {
-                            "type":"vid",
-                            "title":"التقديم",
+                            "type":"iframe",
+                            "title":"البصمة الرقمية",
                             "link":"https://www.youtube.com/embed/aDh0mkU-zJY?si=PTvKEMh-Waqvi5rj"
+                        }
+                    ]
+                },
+                {
+                    "name":"تحقيق رقمي",
+                    "sections":[
+                        {
+                            "type":"iframe",
+                            "title":"التقديم",
+                            "link":"https://www.canva.com/design/DAG6w9Lm_BA/SLCXrGqWTUKGEKiSnhpTwQ/view?embed"
+                        }
+                    ]
+                },
+                {
+                    "name":"درع المواطن الرقمي",
+                    "sections":[
+                        {
+                            "type":"iframe",
+                            "title":"التقديم",
+                            "link":"https://www.canva.com/design/DAG67YYgoeg/fnKBMkqDgyA97gA--rtWLQ/watch?embed"
+                        },
+                        {
+                            "type":"iframe",
+                            "title":"التقديم",
+                            "link":"https://www.canva.com/design/DAG74pJ47GU/NZsGo5PPHv_ZUoduau5_Zg/view?embed"
+                        }
+                    ]
+                },
+                {
+                    "name":"مهارات تقنية عالية",
+                    "sections":[
+                        {
+                            "type":"iframe",
+                            "title":"التقديم",
+                            "link":"https://www.canva.com/design/DAG7ASsEx_A/Ua9-3RFgTAlSK6Qnm2M8jg/view?embed"
                         }
                     ]
                 }
@@ -109,47 +144,47 @@
                     "name":"رحلة افتراضية عبر تاريخ مصر",
                     "sections":[
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"فريق العمل",
                         "link":"https://www.youtube.com/embed/BRsCUsFTNSE?si=-Fr_isu4bt2V7_AT"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"الجزء الأول",
                         "link":"https://www.youtube.com/embed/piPJq0_t8UQ?si=MJG5gcOtZTNUSW_Y"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"الجزء الثاني",
                         "link":"https://www.youtube.com/embed/eNf_OXEEo30?si=9NXJtpa6dDEexy17"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"الجزء الثالث",
                         "link":"https://www.youtube.com/embed/zsNl7sv0Cwc?si=OH45MvqXelH2yFDV"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"الجزء الرابع",
                         "link":"https://www.youtube.com/embed/QFPWllQ8zWo?si=mvnzolzC-BmzbMiR"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"الجزء الخامس",
                         "link":"https://www.youtube.com/embed/uhOP92zl99k?si=FwISHBvRtmazA-dJ"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"الجزء السادس",
                         "link":"https://www.youtube.com/embed/cBOSnoZRuZY?si=teU8XIxUUKemubi8"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"نهاية الرحلة",
                         "link":"https://www.youtube.com/embed/7GSvuAFgzqs?si=J0fVbJSc9itI9JJ2"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"التقديم",
                         "link":"https://www.canva.com/design/DAG4H5tZg6g/Pb2TbFtKaKkbzhR9vQgeOw/view?embed"
                     }
@@ -159,17 +194,17 @@
                     "name":"قصة انتماء",
                     "sections":[
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"برومو",
                         "link":"https://www.youtube.com/embed/UWDH6F5M0yo?si=em54Y0y-04Mwqul5"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"قصة انتماء",
                         "link":"https://www.youtube.com/embed/jsyiU-XbwmM?si=JfZ1N6ZdsGqlB8qn"
                     },
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"مدرستي بوابة لحب وطني",
                         "link":"https://www.youtube.com/embed/EAxnkxtVHKg?si=fD7qICvFh6JPRHwB"
                     }
@@ -179,7 +214,7 @@
                     "name":"جذور لا تموت",
                     "sections":[
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"المسرحية",
                         "link":"https://www.youtube.com/embed/cpLkJzMeRKs?si=id91dHwkWOfh8Go2"
                     }
@@ -189,7 +224,7 @@
                     "name":"في حب مصر",
                     "sections":[
                     {
-                        "type":"vid",
+                        "type":"iframe",
                         "title":"الفقرة الغنائية",
                         "link":"https://www.youtube.com/embed/13dGHybifJ4?si=d-1ZzF28axJDiRhA"
                     }
