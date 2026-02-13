@@ -36,7 +36,7 @@
                         {
                             "type":"iframe",
                             "title":"التقديم",
-                            "link":"https://www.canva.com/design/DAG7ASsEx_A/Ua9-3RFgTAlSK6Qnm2M8jg/view?embed"
+                            "link":"https://www.canva.com/design/DAHBOU51Yy8/clC6PiJwUPR_R0ddwdGxqg/view?embed"
                         }
                     ]
                 },
@@ -44,9 +44,14 @@
                     "name":"مؤثر رقمي مسؤول",
                     "sections":[
                         {
-                            "type":"iframe",
-                            "title":"البصمة الرقمية",
-                            "link":"https://www.youtube.com/embed/aDh0mkU-zJY?si=PTvKEMh-Waqvi5rj"
+                            "type":"vid_src",
+                            "title":"الامان علي الانترنت",
+                            "link":"./videos/s7p2v1.mp4"
+                        },
+                        {
+                            "type":"vid_src",
+                            "title":"الفلسفة عبر الانترنت",
+                            "link":"./videos/s7p2v2.mp4"
                         }
                     ]
                 },
@@ -57,6 +62,11 @@
                             "type":"iframe",
                             "title":"التقديم",
                             "link":"https://www.canva.com/design/DAG6w9Lm_BA/SLCXrGqWTUKGEKiSnhpTwQ/view?embed"
+                        },
+                        {
+                            "type":"vid_src",
+                            "title":"الفيديو",
+                            "link":"./videos/s7p3.mp4"
                         }
                     ]
                 },
@@ -65,13 +75,28 @@
                     "sections":[
                         {
                             "type":"iframe",
-                            "title":"التقديم",
-                            "link":"https://www.canva.com/design/DAG67YYgoeg/fnKBMkqDgyA97gA--rtWLQ/watch?embed"
+                            "title":"انفوجرافيك",
+                            "link":"https://www.canva.com/design/DAG74pJ47GU/NZsGo5PPHv_ZUoduau5_Zg/view?embed"
                         },
                         {
                             "type":"iframe",
-                            "title":"التقديم",
-                            "link":"https://www.canva.com/design/DAG74pJ47GU/NZsGo5PPHv_ZUoduau5_Zg/view?embed"
+                            "title":"اعلان",
+                            "link":"https://www.canva.com/design/DAG67YYgoeg/fnKBMkqDgyA97gA--rtWLQ/watch?embed"
+                        },
+                        {
+                            "type":"vid_src",
+                            "title":"برومو",
+                            "link":"./videos/s7p4v2.mp4"
+                        },
+                        {
+                            "type":"vid_src",
+                            "title":"الفيديو",
+                            "link":"./videos/s7p4v1.mp4"
+                        },
+                        {
+                            "type":"iframe",
+                            "title":"الدعوة",
+                            "link":"https://www.canva.com/design/DAG6762hSMc/NCZB92Qq-xYUj0biYkQO2A/view?embed"
                         }
                     ]
                 },
