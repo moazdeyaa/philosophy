@@ -52,6 +52,16 @@
                             "type":"vid_src",
                             "title":"الفلسفة عبر الانترنت",
                             "link":"./videos/s7p2v2.mp4"
+                        },
+                        {
+                            "type":"iframe",
+                            "title":"التنمر",
+                            "link":"https://bullying10621.netlify.app/"
+                        },
+                        {
+                            "type":"iframe",
+                            "title":"البصمة الرقمية",
+                            "link":"https://digitalfingerprint77.netlify.app/"
                         }
                     ]
                 },
